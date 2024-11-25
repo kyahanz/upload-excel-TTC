@@ -80,7 +80,7 @@ class AssetImport implements ToCollection, WithHeadingRow
         ];
 
         // Insert batch ke database setiap 1000 baris
-        if (count($data) === 5000) {
+        if (count($data) === 1000) {
             Asset::insert($data);
             $data = []; // Kosongkan array untuk batch berikutnya
         }
